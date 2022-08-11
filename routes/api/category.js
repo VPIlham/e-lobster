@@ -1,6 +1,6 @@
 const route = require("express").Router();
 
-const CategoryController = require('../controllers/web/CategoryController');
+const CategoryController = require('../../controllers/api/CategoryController');
 
 route.get("/", CategoryController.index); 
 // route.get("/create", CategoryController.create); 

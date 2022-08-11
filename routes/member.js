@@ -1,6 +1,6 @@
 const route = require("express").Router();
 
-const MemberController = require('../controllers/MemberController');
+const MemberController = require('../controllers/web/MemberController');
 
 module.exports = route;
 
