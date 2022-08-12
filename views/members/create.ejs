@@ -1,0 +1,66 @@
+<%- include('../header') %>
+<div class="row justify-content-center mt-5">
+  <div class="col-md-6">
+    <form class="row g-3" action="/members/create" method="POST">
+      <div class="row mb-3">
+        <label for="">Tambah data Members</label>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-2 col-form-label">Name</label>
+        <div class="col-6">
+          <input type="text" name="name" class="form-control" required />
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-2 col-form-label">Address</label>
+        <div class="col-6">
+          <textarea name="address" id="" cols="36" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-2 col-form-label">Email</label>
+        <div class="col-6">
+          <input type="email" name="email" class="form-control" required />
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-2 col-form-label">City</label>
+        <div class="col-6">
+          <input type="text" name="city" class="form-control" required />
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-2 col-form-label">Gender</label>
+        <div class="col-6">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="gender"
+              value="male"
+              checked
+            />
+            <label class="form-check-label" for="flexRadioDefault2">
+              Male
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="gender"
+              value="female"
+            />
+            <label class="form-check-label" for="flexRadioDefault2">
+              Female
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 float-right">
+        <button class="btn btn-primary" type="submit">Simpan</button>
+        <a href="/members" class="btn btn-danger">Kembali</a>
+      </div>
+    </form>
+  </div>
+</div>

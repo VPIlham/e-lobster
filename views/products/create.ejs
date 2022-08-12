@@ -1,0 +1,48 @@
+<%- include('../header') %>
+<div class="row justify-content-center mt-5">
+  <div class="col-md-6">
+    <form class="row g-3" action="/products/create" method="POST">
+      <div class="row mb-3">
+        <label for="">Tambah data products</label>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-2 col-form-label">Name</label>
+        <div class="col-6">
+          <input type="text" name="name" class="form-control" required />
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-2 col-form-label">Image</label>
+        <div class="col-6">
+          <input type="text" name="image" class="form-control" required />
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-2 col-form-label">Price</label>
+        <div class="col-6">
+          <input type="number" name="price" class="form-control" required />
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-2 col-form-label">Stock</label>
+        <div class="col-6">
+          <input type="number" name="stock" class="form-control" required />
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-2 col-form-label">Category</label>
+        <div class="col-6">
+          <select name="categoryId" class="form-select">
+            <% categories.forEach(category => { %> 
+              <option value="<%= category.id %>"><%= category.name %></option>
+            <% }); %> 
+          </select>
+        </div>
+      </div>
+      <div class="col-12 float-right">
+        <button class="btn btn-primary" type="submit">Simpan</button>
+        <a href="/products" class="btn btn-danger">Kembali</a>
+      </div>
+    </form>
+  </div>
+</div>

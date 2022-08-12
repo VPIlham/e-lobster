@@ -1,3 +1,5 @@
+<%- include('../header') %>
+
 <div class="row justify-content-center mt-5">
   <div class="col-md-6">
     <form class="row g-3" action="/categories/update/<%= result.id %>" method="POST">
@@ -12,6 +14,7 @@
       </div>
       <div class="col-12 float-right">
         <button class="btn btn-primary" type="submit">Edit</button>
+        <a href="/categories" class="btn btn-danger">Kembali</a>
       </div>
     </form>
   </div>

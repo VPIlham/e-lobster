@@ -53,8 +53,8 @@ class CategoryController {
         },
       });
 
-      res.json(data);
-      //   return res.redirect("/categories");
+      // res.json(data);
+      return res.redirect("/categories");
     } catch (error) {
       res.json(error);
     }
@@ -89,8 +89,8 @@ class CategoryController {
         )
         .then((result) => {
           //   console.log(result);
-          return res.json(result);
-          //   return res.redirect("/categories");
+          // return res.json(result);
+          return res.redirect("/categories");
         })
         .catch((err) => res.json(err));
     } catch (error) {

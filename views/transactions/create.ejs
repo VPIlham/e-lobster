@@ -1,0 +1,52 @@
+<%- include('../header') %>
+<div class="row justify-content-center mt-5">
+  <div class="col-md-6">
+    <form class="row g-3" action="/transactions/create" method="POST">
+      <div class="row mb-3">
+        <label for="">Tambah data transaction</label>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-2 col-form-label">Product</label>
+        <div class="col-7">
+          <select name="productId" class="form-select">
+            <% result.products.forEach(product => { %>
+            <option value="<%= product.id %>">
+              <%= product.name %> | qty : <%= product.stock %>
+            </option>
+            <% }); %>
+          </select>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-2 col-form-label">Members ID</label>
+        <div class="col-6">
+          <select name="memberId" class="form-select">
+            <% result.members.forEach(member => { %>
+            <option value="<%= member.id %>"><%= member.name %></option>
+            <% }); %>
+          </select>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-2 col-form-label">Jumlah Qty</label>
+        <div class="col-6">
+          <input type="text" name="qty" class="form-control" required />
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-2 col-form-label">Pembayaran</label>
+        <div class="col-6">
+          <select name="payment" class="form-select">
+            <option value="cash">Cash</option>
+            <option value="transfer">Transfer</option>
+            <option value="dp">DP</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-12 float-right">
+        <button class="btn btn-primary" type="submit">Simpan</button>
+        <a href="/products" class="btn btn-danger">Kembali</a>
+      </div>
+    </form>
+  </div>
+</div>

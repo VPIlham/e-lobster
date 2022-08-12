@@ -1,1 +1,25 @@
-<h3>Selamat Datang di myApp</h3>
+<%- include('./header') %>
+
+<div class="container p-5">
+  <h3>Selamat Datang di E-Lobster</h3>
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <div class="row">
+        <% result.forEach((data, i) => { %>
+        <div class="col-4 ">
+          <div class="card my-2">
+            <img src="<%= data.image %>" height="200" alt="<%= data.name %>" />
+            <div class="card-body">
+              <h5 class="card-title"><%= data.name %></h5>
+              <span class="badge text-bg-warning">Stok : <%= data.stock %></span>
+              <span class="badge text-bg-success">Kategori : <%= data.category.name %></span>
+              <br>
+              <a href="/products/edit/<%= data.id %>" class="mt-3 btn btn-primary">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+</div>

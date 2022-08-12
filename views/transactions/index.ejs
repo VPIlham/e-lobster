@@ -2,7 +2,7 @@
 
 <div class="row justify-content-center mt-5">
   <div class="col-md-9">
-    <a href="/categories/create" class="btn btn-success"
+    <a href="/transactions/create" class="btn btn-success"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
@@ -25,23 +25,35 @@
         <tr>
           <th scope="col">No</th>
           <th scope="col">Name</th>
-          <th scope="col">Actions</th>
+          <th scope="col">Payment</th>
+          <th scope="col">Buyer</th>
+          <th scope="col">Item</th>
+          <th scope="col">Price</th>
+          <th scope="col">Qty</th>
+          <th scope="col">Total</th>
+          <th scope="col">Category</th>
         </tr>
       </thead>
       <tbody>
-        <% result.forEach((category, i) => { %>
+        <% result.forEach((transaction, i) => { %>
         <tr>
           <th scope="row"><%= i + 1 %></th>
-          <td class="text-capitalize"><%= category.name %></td>
+          <td class="text-capitalize"><%= transaction.name %></td>
+          <td class="text-lowercase"><%= transaction.transaction.payment %></td>
+          <td class="text-capitalize"><%= transaction.transaction.member.name %></td>
+          <td class="text-capitalize"><%= transaction.product.name %></td>
+          <td class="text-capitalize"><%= transaction.product.price %></td>
+          <td class="text-capitalize"><%= transaction.qty %></td>
+          <td class="text-capitalize"><%= transaction.total %></td>
           <td>
             <a
-              href="categories/edit/<%= category.id %>"
+              href="/transactions/edit/<%= transaction.id %>"
               class="badge text-bg-primary text-decoration-none"
               >Edit</a
             >
             |
             <a
-              href="categories/delete/<%= category.id %>"
+              href="/transactions/delete/<%= transaction.id %>"
               class="badge text-bg-danger text-decoration-none"
               >Hapus</a
             >

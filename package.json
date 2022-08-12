@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start" : "nodemon app.js",
+    "start": "nodemon app.js",
     "db-install": "npx sequelize-cli db:create && npx sequelize db:migrate",
     "db-migrate": "npx sequelize db:migrate",
     "test": "echo \"Error: no test specified\" && exit 1"
