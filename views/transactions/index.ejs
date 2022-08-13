@@ -44,7 +44,11 @@
           <td class="text-capitalize"><%= transaction.product.name %></td>
           <td class="text-capitalize"><%= transaction.product.price %></td>
           <td class="text-capitalize"><%= transaction.qty %></td>
-          <td class="text-capitalize"><%= transaction.total %></td>
+          <td class="text-capitalize"><%= Intl.NumberFormat("id-ID", {
+            style: "currency",
+            currency: "IDR",
+            minimumFractionDigits: 0
+          }).format(transaction.total) %></td>
           <td>
             <a
               href="/transactions/edit/<%= transaction.id %>"

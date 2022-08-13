@@ -38,7 +38,11 @@
           <td class="text-capitalize"><%= product.name %></td>
           <td class="text-lowercase"><img src="<%= product.image %>" width="50" height="40" alt=""></td>
           <td class="text-capitalize"><%= product.stock %></td>
-          <td class="text-capitalize"><%= product.price %></td>
+          <td class="text-capitalize"><%= Intl.NumberFormat("id-ID", {
+            style: "currency",
+            currency: "IDR",
+            minimumFractionDigits: 0
+          }).format(product.price) %></td>
           <td class="text-capitalize"><%= product.category.name%></td>
           <td>
             <a
