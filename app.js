@@ -6,7 +6,6 @@ const port = process.env.PORT || 30;
 const path = require('path');
 const expressLayout = require('express-ejs-layouts');
 
-
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./e-lobster.json');
 
