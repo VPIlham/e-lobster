@@ -1,6 +1,25 @@
 <%- include('../header') %>
 
 <div class="row justify-content-center mt-5">
+  <div class="col-9 row mb-4">
+    <div class="col-3">
+      <div class="card p-3">
+        <h4 class="text-center" style="font-weight: 600; font-size: 18px">
+          Total Penjualan
+        </h4>
+        <h3 class="text-center" style="font-size: 16px; color:rgb(51, 200, 51)"><%= Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR",
+          minimumFractionDigits: 0 }).format(total_transaksi) %></h3>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card p-3">
+        <h4 class="text-center" style="font-weight: 600; font-size: 18px">
+          Total Stok Terjual
+        </h4>
+        <h3 class="text-center" style="font-size: 16px; color:rgb(38, 68, 205)"><%= totalStokTerjual %></h3>
+      </div>
+    </div>
+  </div>
   <div class="col-md-9">
     <a href="/transactions/create" class="btn btn-success"
       ><svg
@@ -40,15 +59,16 @@
           <th scope="row"><%= i + 1 %></th>
           <td class="text-capitalize"><%= transaction.name %></td>
           <td class="text-lowercase"><%= transaction.transaction.payment %></td>
-          <td class="text-capitalize"><%= transaction.transaction.member.name %></td>
+          <td class="text-capitalize">
+            <%= transaction.transaction.member.name %>
+          </td>
           <td class="text-capitalize"><%= transaction.product.name %></td>
           <td class="text-capitalize"><%= transaction.product.price %></td>
           <td class="text-capitalize"><%= transaction.qty %></td>
-          <td class="text-capitalize"><%= Intl.NumberFormat("id-ID", {
-            style: "currency",
-            currency: "IDR",
-            minimumFractionDigits: 0
-          }).format(transaction.total) %></td>
+          <td class="text-capitalize">
+            <%= Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR",
+            minimumFractionDigits: 0 }).format(transaction.total) %>
+          </td>
           <td>
             <a
               href="/transactions/edit/<%= transaction.id %>"

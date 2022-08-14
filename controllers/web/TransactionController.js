@@ -38,8 +38,21 @@ class TransactionController {
           message: "Data tidak tersedia",
         };
       }
-      // return res.json(data);
-      return res.render("transactions/index.ejs", { result: data });
+
+      let totalTransaksi = data.reduce((prev, item) => {
+        return prev + item.dataValues.total;
+      }, 0);
+
+      let totalStok = data.reduce((prev, item) => {
+        return prev + item.dataValues.qty;
+      }, 0);
+
+      // return res.json(totalStok);
+      return res.render("transactions/index.ejs", {
+        result: data,
+        total_transaksi: totalTransaksi,
+        totalStokTerjual: totalStok,
+      });
     } catch (error) {
       res.json(error);
     }

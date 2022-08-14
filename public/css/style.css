@@ -27,7 +27,7 @@ h6 {
   text-overflow: ellipsis;
 }
 
-.card:hover {
+.__item-card:hover {
   -webkit-box-shadow: 2px 8px 20px 0px rgba(120, 120, 120, 1) !important;
   -moz-box-shadow: 2px 8px 20px 0px rgba(120, 120, 120, 1) !important;
   box-shadow: 2px 8px 20px 0px rgba(120, 120, 120, 1) !important;
