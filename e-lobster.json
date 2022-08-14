@@ -1,0 +1,601 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "e-lobster",
+    "contact": {},
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/categories": {
+      "get": {
+        "tags": [
+          "Category"
+        ],
+        "summary": "List",
+        "operationId": "List",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/categories/create": {
+      "post": {
+        "tags": [
+          "Category"
+        ],
+        "summary": "Add",
+        "operationId": "Add",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "name"
+                ],
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Lobster Bambu"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/categories/update/2": {
+      "post": {
+        "tags": [
+          "Category"
+        ],
+        "summary": "Update",
+        "operationId": "Update",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "name"
+                ],
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Lobster Konsumsi Edit"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/categories/delete/2": {
+      "get": {
+        "tags": [
+          "Category"
+        ],
+        "summary": "Delete",
+        "operationId": "Delete",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/products": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "summary": "List",
+        "operationId": "GetList",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/products/delete/2": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "summary": "Delete",
+        "operationId": "GetDelete",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/products/create": {
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "summary": "Add",
+        "operationId": "PostAdd",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "categoryId",
+                  "name",
+                  "image",
+                  "stock",
+                  "price"
+                ],
+                "type": "object",
+                "properties": {
+                  "categoryId": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 1
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "Cherax Quadricarinatus 1 Kg "
+                  },
+                  "image": {
+                    "type": "string",
+                    "example": "https://i0.wp.com/harga.web.id/wp-content/uploads/lobster-capit-merah.jpg?fit=680,300&ssl=1"
+                  },
+                  "stock": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 50
+                  },
+                  "price": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 200000
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/products/update/3": {
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "summary": "Update",
+        "operationId": "PostUpdate",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "categoryId",
+                  "name",
+                  "image",
+                  "stock",
+                  "price"
+                ],
+                "type": "object",
+                "properties": {
+                  "categoryId": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 1
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "Cherax Quadricarinatus 1 Kg "
+                  },
+                  "image": {
+                    "type": "string",
+                    "example": "https://i0.wp.com/harga.web.id/wp-content/uploads/lobster-capit-merah.jpg?fit=680,300&ssl=1"
+                  },
+                  "stock": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 50
+                  },
+                  "price": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 200000
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/transactions": {
+      "get": {
+        "tags": [
+          "Transaction"
+        ],
+        "summary": "List",
+        "operationId": "GetList1",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/transactions/delete/3": {
+      "get": {
+        "tags": [
+          "Transaction"
+        ],
+        "summary": "Delete",
+        "operationId": "GetDelete1",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/transactions/create": {
+      "post": {
+        "tags": [
+          "Transaction"
+        ],
+        "summary": "Add",
+        "operationId": "PostAdd1",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "memberId",
+                  "name",
+                  "payment",
+                  "productId",
+                  "total",
+                  "qty",
+                  "status"
+                ],
+                "type": "object",
+                "properties": {
+                  "memberId": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 1
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "TRX20000"
+                  },
+                  "payment": {
+                    "type": "string",
+                    "example": "Transfer"
+                  },
+                  "productId": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 1
+                  },
+                  "total": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 10000
+                  },
+                  "qty": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 15
+                  },
+                  "status": {
+                    "type": "string",
+                    "example": "SUKSES"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/transactions/update/2": {
+      "post": {
+        "tags": [
+          "Transaction"
+        ],
+        "summary": "Update",
+        "operationId": "PostUpdate1",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "memberId",
+                  "name",
+                  "payment",
+                  "productId",
+                  "total",
+                  "qty",
+                  "status"
+                ],
+                "type": "object",
+                "properties": {
+                  "memberId": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 1
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "TRX30000"
+                  },
+                  "payment": {
+                    "type": "string",
+                    "example": "Transfer"
+                  },
+                  "productId": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 3
+                  },
+                  "total": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 10000
+                  },
+                  "qty": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 15
+                  },
+                  "status": {
+                    "type": "string",
+                    "example": "SUKSES"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/members/create": {
+      "post": {
+        "tags": [
+          "Member"
+        ],
+        "summary": "Add",
+        "operationId": "PostAdd2",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "name",
+                  "address",
+                  "city",
+                  "email",
+                  "gender"
+                ],
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Ilham"
+                  },
+                  "address": {
+                    "type": "string",
+                    "example": "Jl pekapuran rt 02/04"
+                  },
+                  "city": {
+                    "type": "string",
+                    "example": "depok"
+                  },
+                  "email": {
+                    "type": "string",
+                    "example": "ilhamnurhakim@gmail.com"
+                  },
+                  "gender": {
+                    "type": "string",
+                    "example": "male"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/members": {
+      "get": {
+        "tags": [
+          "Member"
+        ],
+        "summary": "List",
+        "operationId": "GetList2",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/members/update/2": {
+      "post": {
+        "tags": [
+          "Member"
+        ],
+        "summary": "Update",
+        "operationId": "PostUpdate2",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "gender",
+                  "name"
+                ],
+                "type": "object",
+                "properties": {
+                  "gender": {
+                    "type": "string",
+                    "example": "female"
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "nurhakim"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/members/delete/1": {
+      "get": {
+        "tags": [
+          "Member"
+        ],
+        "summary": "Delete",
+        "operationId": "GetDelete2",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Category"
+    },
+    {
+      "name": "Product"
+    },
+    {
+      "name": "Transaction"
+    },
+    {
+      "name": "Member"
+    }
+  ]
+}

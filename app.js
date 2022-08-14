@@ -7,28 +7,10 @@ const path = require('path');
 const expressLayout = require('express-ejs-layouts');
 
 
-const optsSwagger = {
-  definition: {
-      openapi: '3.0.0',
-      info: {
-          title: 'Employee Data API',
-          version: '1.0.0',
-          description: ''
-      },
-      servers: [
-          {
-              url: 'http://localhost:3000',
-          }
-      ]
-  },
-  apis: ['./routes/api/*.js']
-};
-
-
 const swaggerUi = require('swagger-ui-express');
-const swaggerDocs = require('swagger-jsdoc');
+const swaggerDocument = require('./e-lobster.json');
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs(optsSwagger)));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // view engine setup
 app.use(expressLayout);
