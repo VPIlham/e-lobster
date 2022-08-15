@@ -1,10 +1,18 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "admin",
-    "database": "e-lobster",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "username": "rlleimanqqwwmc",
+    "password": "ca4efd4961847d15c4fbe1fafa7291e2bae5c69e91c7687a6bb27a8e7b9993f8",
+    "database": "d50tb83mvsojl2",
+    "port" : "5432",
+    "uri" : "postgres://rlleimanqqwwmc:ca4efd4961847d15c4fbe1fafa7291e2bae5c69e91c7687a6bb27a8e7b9993f8@ec2-44-195-100-240.compute-1.amazonaws.com:5432/d50tb83mvsojl2",
+    "host": "ec2-44-195-100-240.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   },
   "test": {
     "username": "root",

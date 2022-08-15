@@ -68,8 +68,8 @@ class CategoryController {
         name,
       });
 
-      return res.json(data);
-      //   return res.redirect("/categories");
+      // return res.json(data);
+        return res.redirect("/categories");
     } catch (error) {
       res.json(error);
     }
