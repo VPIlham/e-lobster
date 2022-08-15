@@ -7,13 +7,6 @@ class ProductController {
         order: [["id", "ASC"]],
         include: [categories],
       });
-
-      if (data.length == 0) {
-        throw {
-          message: "Data tidak tersedia",
-        };
-      }
-
       //   return res.json(data);
       return res.render("products/index.ejs", { result: data });
     } catch (error) {

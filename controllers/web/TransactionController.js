@@ -33,12 +33,6 @@ class TransactionController {
         ],
       });
 
-      if (data.length == 0) {
-        throw {
-          message: "Data tidak tersedia",
-        };
-      }
-
       let totalTransaksi = data.reduce((prev, item) => {
         return prev + item.dataValues.total;
       }, 0);

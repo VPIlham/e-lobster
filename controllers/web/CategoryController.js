@@ -5,11 +5,6 @@ class CategoryController {
       let data = await categories.findAll({
         order: [["id", "ASC"]],
       });
-      if (data.length == 0) {
-        throw {
-          message: "Data tidak tersedia",
-        };
-      }
       // return res.json(data);
         return res.render("categories/index.ejs", { result: data });
     } catch (error) {

@@ -6,11 +6,6 @@ class MemberController {
       let data = await members.findAll({
         order: [["id", "ASC"]],
       });
-      if (data.length == 0) {
-        throw {
-          message: "Data tidak tersedia",
-        };
-      }
       //   return res.json(data);
       return res.render("members/index.ejs", { result: data });
     } catch (error) {
