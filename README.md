@@ -1,3 +1,11 @@
+##- Apps E-Lobster
+- URL : https://e-lobster.herokuapp.com/ 
+- API : https://e-lobster.herokuapp.com/api-docs
+
+### How To Start ?
+- npm run start / npm start
+
+
 create table categories
 - npx sequelize-cli model:generate --name categories --attributes name:string
 
